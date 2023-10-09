@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <script setup>
 import { onMounted } from 'vue'
 import BaseCard from '@/components/BaseCard.vue'
@@ -17,12 +18,12 @@ onMounted(async () => {
 <template>
   <button
     title="Load Characters"
-    class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center rounded-full bg-purple-600 text-4xl text-white drop-shadow-lg duration-300 hover:scale-110 hover:bg-red-700 hover:drop-shadow-2xl"
+    class="z-90 fixed bottom-8 right-8 flex h-20 w-20 items-center justify-center rounded-full bg-orange-600 text-4xl text-white drop-shadow-lg duration-300 hover:scale-110 hover:bg-slate-700 hover:drop-shadow-2xl"
     @click="fetchCharacters"
   >
     🚀
   </button>
-  <main class="min-h-screen bg-gradient-to-r from-purple-900 to-red-700">
+  <main class="min-h-screen bg-gradient-to-r from-orange-900 to-slate-700">
     <div class="container mx-auto grid grid-cols-8 gap-4 py-8">
       <BaseCard
         v-for="character in characters"

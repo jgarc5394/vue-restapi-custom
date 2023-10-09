@@ -11,18 +11,18 @@ const page = ref(1)
 
 const useCharacters = () => {
   const fetchCharacters = async () => {
-    const { data } = await api.instance.get('/cards', {
+    const { data } = await api.instance.get('/characters', {
       params: {
         page: page.value,
       },
     })
 
-    characters.value.push(...data.cards)
+    characters.value.push(...data.characters)
     page.value++
   }
 
   const fetchCharacter = async (id) => {
-    const { data } = await api.instance.get(`/cards/${id}`)
+    const { data } = await api.instance.get(`/characters/${id}`)
     currentCharacter.value = data
     console.log(data)
   }
