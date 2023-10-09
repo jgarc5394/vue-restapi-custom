@@ -27,7 +27,7 @@ onMounted(async () => {
     <div class="container mx-auto grid grid-cols-8 gap-4 py-8">
       <BaseCard
         v-for="character in characters"
-        :key="character._id"
+        :key="character.id"
         :character="character"
       />
     </div>

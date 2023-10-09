@@ -5,9 +5,9 @@ const props = defineProps({
   character: {
     type: Object,
     default: () => ({
-      multiverseid: -1,
+      id: -1,
       name: 'Unknown',
-      imageURL: 'https://via.placeholder.com/150',
+      images: 'https://via.placeholder.com/150',
     }),
   },
 })
@@ -15,13 +15,13 @@ const props = defineProps({
 
 <template>
   <RouterLink
-    v-if="props.character.multiverseid"
-    :to="`/characters/${props.character.multiverseid}`"
+    v-if="props.character.id"
+    :to="`/characters/${props.character.id}`"
     class="rounded-lg bg-white shadow-lg"
   >
     <img
       class="w-full rounded-t-lg object-cover"
-      :src="props.character.imageURL"
+      :src="props.character.images"
     />
     <div class="p-4">
       <h2 class="text-1xl font-semibold text-gray-800">
