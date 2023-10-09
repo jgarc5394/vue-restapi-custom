@@ -21,7 +21,7 @@ const props = defineProps({
   >
     <img
       class="w-full rounded-t-lg object-cover"
-      :src="props.character.images"
+      :src="props.character.images[0]"
     />
     <div class="p-4">
       <h2 class="text-1xl font-semibold text-gray-800">
